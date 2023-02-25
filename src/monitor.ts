@@ -11,6 +11,7 @@ export async function monitor(query: string) {
         console.log('Error on Initial Request')
         return
     }
+    console.log(`Started monitoring for query "${query}"`)
     await timeout(4000)
     while(true) {
         try {
