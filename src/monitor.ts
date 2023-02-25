@@ -26,7 +26,6 @@ export async function monitor(query: string) {
 }
 
 async function compare(oldResults: any[], newResults: any[]) {
-    console.log(oldResults)
     if(oldResults != newResults) {
         if(newResults.length > oldResults.length) {
             for(let res in newResults) {
