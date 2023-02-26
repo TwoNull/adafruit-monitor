@@ -15,7 +15,7 @@ export async function monitor(query: string) {
     return;
   }
   console.log(`Started monitoring for query "${query}"`);
-  await timeout(4000);
+  await timeout(5000);
   while (true) {
     try {
       const nextRes = await getProducts(query);
@@ -24,7 +24,7 @@ export async function monitor(query: string) {
     } catch (err) {
       console.log(err);
     }
-    await timeout(4000);
+    await timeout(5000);
   }
 }
 
