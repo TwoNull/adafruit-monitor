@@ -1,8 +1,8 @@
-import { monitor } from './src/monitor'
-import dotenv from 'dotenv'
+import { monitor } from "./src/monitor";
+import dotenv from "dotenv";
 
-dotenv.config()
+dotenv.config();
 
-const query = process.env.SEARCH_QUERY!
+const query = process.env.SEARCH_QUERY!;
 
-monitor(query)
+monitor(query);

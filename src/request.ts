@@ -16,15 +16,16 @@ export async function getProducts(query: string) {
       "User-Agent":
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
       accept: "application/json",
-      "content-type": "application/x-www-form-urlencoded"
+      "content-type": "application/x-www-form-urlencoded",
     },
     data: JSON.stringify({
       requests: [
         {
           indexName: "prod_products",
-          params:
-            `query=${encodeURIComponent(query)}&hitsPerPage=10&maxValuesPerFacet=2000&page=0&facets=%5B%22availability%22%5D&tagFilters=&facetFilters=`,
-        }
+          params: `query=${encodeURIComponent(
+            query
+          )}&hitsPerPage=10&maxValuesPerFacet=2000&page=0&facets=%5B%22availability%22%5D&tagFilters=&facetFilters=`,
+        },
       ],
     }),
   };
